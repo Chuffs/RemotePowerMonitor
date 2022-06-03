@@ -4,9 +4,10 @@
  * 
  * Power Outage detection and notification for a remote site
  * 
+ * ESP8266 Wemos Mini D1
+ * https://escapequotes.net/esp8266-wemos-d1-mini-pins-and-diagram/
  * Using Waveshare SIM7000E GPRS and GPS Module through serial connection
  * https://www.waveshare.com/sim7000e-nb-iot-hat.htm
- * https://escapequotes.net/esp8266-wemos-d1-mini-pins-and-diagram/  
  * 
  * 
  * Serial Connection Config:
@@ -29,8 +30,13 @@ void waitForOK(String commmand);
 //Function to send SMS message to specified number - no checks
 void sendSMS_OK(String message, String number);
 
-//Phone number w/ area code, e.g. Australia = +61
-String phonenumber = "+61449001120";
+void(* resetFunc) (void) = 0;
+float mapf(float x, float in_min, float in_max, float out_min, float out_max);
+
+//Hologram Cloud API SMS Number
+String phonenumber = "447937405250";
+
+unsigned long previousMillis = 0; 
 
 void setup() {
   int signalFlag = 1;
@@ -46,6 +52,18 @@ void setup() {
   while(!Serial1);
   Serial.println("Serial1 Ready!");
 
+  //Wait ~30 seconds for modem to finish startup
+  Serial.println("Wait ~30s for Modem to Finish Startup...");
+  for(int i = 1; i < 4; i++) {
+    for(int j = 1; j < 11; j++) {
+      Serial.print("...");
+      delay(1000);
+    }
+    Serial.println();
+    Serial.print(i*10);
+    Serial.println(" Seconds waited..");
+  }
+
   // Attention Device
   sendCommand("AT");
   //See if device is ready & ensure echo is off
@@ -55,7 +73,7 @@ void setup() {
   //Enable LTE Mode for SIM
   waitForOK("AT+CNMP=38");
   //Enable CAT-M1 and nb-IoT
-  waitForOK("AT+CMNB=3");
+  waitForOK("AT+CMNB=1");
   //Enable reporting of network registration status
   waitForOK("AT+CREG=1");
   //Automatically select network operator
@@ -77,9 +95,13 @@ void setup() {
       if(signalResponse[1] == 1 | signalResponse[1] == 5){
         Serial.println("Connected to a Network");
         break;
-      }
-    } else {
+      } else {
       Serial.println("Command OK, not connected to Network");
+      if (signalResponse[1] == 0) {
+        Serial.println("MT not searching for new network, reset device");
+        resetFunc();
+      }
+    }
     }
     delay(5000);
   }
@@ -88,6 +110,7 @@ void setup() {
 }
 
 void loop() {
+  unsigned long currentMillis = millis();
   if(analogRead(A0) < 500){
     delay(1000);
     if(analogRead(A0) < 500) {
@@ -103,6 +126,12 @@ void loop() {
       Serial.println("Power Restored");
       sendSMS_OK("Power Restored at Location: @A", phonenumber);
     }    
+  }
+  if(currentMillis - previousMillis >= 5000) {
+    previousMillis = currentMillis;
+    float val = mapf(analogRead(A0), 0, 1024, 0, 3.3);
+    Serial.print("Current Detection Voltage = ");
+    Serial.println(val);
   }
 }
 
@@ -229,15 +258,21 @@ String sendCommand(String command) {
 
 void waitForOK(String command) {
   int delay_val = 1000;
-  while(1) {
+  int cmd_sent = 1;
+  while(cmd_sent) {
     if(sendCommandOK(command)){
-      // Recieved correct data from SIM Module, return
+      // Recieved correct data from SIM Module
+      cmd_sent = 0;
       return;
     } else {
       // Nothing returned from SIM Module, try again
       Serial.printf("No response from module, trying again in %d seconds\n", delay_val/1000);
       delay(delay_val);
-      delay_val <= 10000 ? delay_val : delay_val * 2; 
+      if(delay_val < 10000) {
+        delay_val = delay_val*2;
+      } else {
+        delay_val = 10000;
+      }
     }
   }
 }
@@ -256,4 +291,8 @@ void sendSMS_OK(String message, String number) {
   delay(500);
   Serial1.print(message);
   Serial1.print(CTRL_Z);
+}
+
+float mapf(float x, float in_min, float in_max, float out_min, float out_max) {
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
