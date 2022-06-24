@@ -99,7 +99,7 @@ void setup() {
       Serial.println("Command OK, not connected to Network");
       if (signalResponse[1] == 0) {
         Serial.println("MT not searching for new network, reset device");
-        resetFunc();
+        ESP.restart();
       }
     }
     }
@@ -268,7 +268,7 @@ void waitForOK(String command) {
       // Nothing returned from SIM Module, try again
       Serial.printf("No response from module, trying again in %d seconds\n", delay_val/1000);
       delay(delay_val);
-      if(delay_val < 10000) {
+      if(delay_val < 10000 | delay_val*2 < 10000) {
         delay_val = delay_val*2;
       } else {
         delay_val = 10000;
