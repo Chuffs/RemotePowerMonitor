@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>E:\Github\RemotePowerMonitor\v0.2a\v0.2a\v0.2a.sch</source>
+    <date>12/08/2022 7:20:50 PM</date>
+    <tool>Eeschema (5.1.6)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>v0.2a.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>4N25</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm</footprint>
+      <datasheet>https://www.vishay.com/docs/83725/4n25.pdf</datasheet>
+      <libsource lib="Isolator" part="4N25" description="DC Optocoupler Base Connected, Vce 30V, CTR 20%, Viso 2500V, DIP6"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C15995</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C1ECBF</tstamp>
+    </comp>
+    <comp ref="TP1">
+      <value>5v Wall</value>
+      <footprint>TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm_LowProfile</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C229DE</tstamp>
+    </comp>
+    <comp ref="TP2">
+      <value>5v Regulator</value>
+      <footprint>TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm_LowProfile</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C2496D</tstamp>
+    </comp>
+    <comp ref="TP3">
+      <value>3v3 Regulator</value>
+      <footprint>TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm_LowProfile</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C24DBA</tstamp>
+    </comp>
+    <comp ref="TP6">
+      <value>Wall GND</value>
+      <footprint>TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm_LowProfile</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C2549A</tstamp>
+    </comp>
+    <comp ref="TP4">
+      <value>Battery +</value>
+      <footprint>TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm_LowProfile</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C27EE4</tstamp>
+    </comp>
+    <comp ref="TP5">
+      <value>uP GND</value>
+      <footprint>TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm_LowProfile</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C28FFF</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>BATT in</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C2A662</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>External 5v Reg</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C2BDDB</tstamp>
+    </comp>
+    <comp ref="TP8">
+      <value>Outage_Sense</value>
+      <footprint>TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm_LowProfile</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C2E429</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>50</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C3459F</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>5v Wall</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C38B75</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>WeMos_D1_mini</value>
+      <footprint>Module:WEMOS_D1_mini_light</footprint>
+      <datasheet>http://www.wemos.cc/Products/d1_mini.html</datasheet>
+      <libsource lib="wemos_mini" part="WeMos_D1_mini" description="WeMos D1 mini"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C3E700</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C45C5C</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C46153</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>470</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C39ED5</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>Serial0</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C413A8</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>Serial1 (SIM7000E)</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C41EFF</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>Wemos RHS</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x08" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62CA175D</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>Wemos LHS</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x08" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62CA1CE1</tstamp>
+    </comp>
+    <comp ref="TP7">
+      <value>Battery_Sense</value>
+      <footprint>TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm_LowProfile</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62D3A80A</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x08">
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x08</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Small">
+      <description>Resistor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Isolator" part="4N25">
+      <aliases>
+        <alias>4N26</alias>
+        <alias>TIL111</alias>
+        <alias>4N27</alias>
+        <alias>4N28</alias>
+        <alias>4N35</alias>
+        <alias>4N36</alias>
+        <alias>4N37</alias>
+      </aliases>
+      <description>DC Optocoupler Base Connected, Vce 30V, CTR 20%, Viso 2500V, DIP6</description>
+      <docs>https://www.vishay.com/docs/83725/4n25.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">4N25</field>
+        <field name="Footprint">Package_DIP:DIP-6_W7.62mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="NC" type="NotConnected"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="wemos_mini" part="WeMos_D1_mini">
+      <description>WeMos D1 mini</description>
+      <docs>http://www.wemos.cc/Products/d1_mini.html</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">WeMos_D1_mini</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Rst" type="BiDi"/>
+        <pin num="2" name="A0" type="BiDi"/>
+        <pin num="3" name="D0" type="BiDi"/>
+        <pin num="4" name="D5" type="BiDi"/>
+        <pin num="5" name="D6" type="BiDi"/>
+        <pin num="6" name="D7" type="BiDi"/>
+        <pin num="7" name="D8" type="BiDi"/>
+        <pin num="8" name="3.3V" type="power_out"/>
+        <pin num="9" name="5V" type="power_in"/>
+        <pin num="10" name="GND" type="power_in"/>
+        <pin num="11" name="D4" type="BiDi"/>
+        <pin num="12" name="D3" type="BiDi"/>
+        <pin num="13" name="D2" type="BiDi"/>
+        <pin num="14" name="D1" type="BiDi"/>
+        <pin num="15" name="Rx" type="BiDi"/>
+        <pin num="16" name="Tx" type="BiDi"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="Isolator">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Isolator.lib</uri>
+    </library>
+    <library logical="wemos_mini">
+      <uri>Z:/Projects/KiCad/wemos-d1-mini-kicad-master/libraries/wemos_mini.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/Tx">
+      <node ref="J6" pin="1"/>
+      <node ref="U2" pin="16"/>
+    </net>
+    <net code="2" name="/Rx">
+      <node ref="U2" pin="15"/>
+      <node ref="J6" pin="2"/>
+    </net>
+    <net code="3" name="/D1">
+      <node ref="R1" pin="1"/>
+      <node ref="U1" pin="4"/>
+      <node ref="J6" pin="3"/>
+      <node ref="TP8" pin="1"/>
+      <node ref="U2" pin="14"/>
+    </net>
+    <net code="4" name="/D2">
+      <node ref="U2" pin="13"/>
+      <node ref="J6" pin="4"/>
+    </net>
+    <net code="5" name="/D3">
+      <node ref="J6" pin="5"/>
+      <node ref="U2" pin="12"/>
+    </net>
+    <net code="6" name="/D4">
+      <node ref="J5" pin="1"/>
+      <node ref="U2" pin="11"/>
+      <node ref="J6" pin="6"/>
+    </net>
+    <net code="7" name="/Batt-">
+      <node ref="J4" pin="3"/>
+      <node ref="TP5" pin="1"/>
+      <node ref="R4" pin="2"/>
+      <node ref="U2" pin="10"/>
+      <node ref="J5" pin="4"/>
+      <node ref="J1" pin="2"/>
+      <node ref="R1" pin="2"/>
+      <node ref="J2" pin="2"/>
+      <node ref="J6" pin="7"/>
+    </net>
+    <net code="8" name="+5VA">
+      <node ref="J5" pin="3"/>
+      <node ref="J6" pin="8"/>
+      <node ref="TP2" pin="1"/>
+      <node ref="U2" pin="9"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="9" name="/RST">
+      <node ref="R5" pin="2"/>
+      <node ref="J7" pin="1"/>
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="10" name="/D8">
+      <node ref="J7" pin="7"/>
+      <node ref="U2" pin="7"/>
+      <node ref="J4" pin="1"/>
+    </net>
+    <net code="11" name="/D0">
+      <node ref="J7" pin="3"/>
+      <node ref="R5" pin="1"/>
+      <node ref="U2" pin="3"/>
+    </net>
+    <net code="12" name="/D5">
+      <node ref="U2" pin="4"/>
+      <node ref="J7" pin="4"/>
+    </net>
+    <net code="13" name="/D6">
+      <node ref="J7" pin="5"/>
+      <node ref="U2" pin="5"/>
+    </net>
+    <net code="14" name="/D7">
+      <node ref="J7" pin="6"/>
+      <node ref="J5" pin="2"/>
+      <node ref="U2" pin="6"/>
+    </net>
+    <net code="15" name="+3V3">
+      <node ref="TP3" pin="1"/>
+      <node ref="U2" pin="8"/>
+      <node ref="J7" pin="8"/>
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="16" name="/Batt+">
+      <node ref="J1" pin="1"/>
+      <node ref="TP4" pin="1"/>
+      <node ref="R3" pin="1"/>
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="17" name="/GND_wall">
+      <node ref="R2" pin="2"/>
+      <node ref="J3" pin="2"/>
+      <node ref="TP6" pin="1"/>
+    </net>
+    <net code="18" name="Net-(R2-Pad1)">
+      <node ref="R2" pin="1"/>
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="19" name="Net-(U1-Pad3)">
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="20" name="Net-(U1-Pad6)">
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="21" name="+5V">
+      <node ref="U1" pin="1"/>
+      <node ref="TP1" pin="1"/>
+      <node ref="J3" pin="1"/>
+    </net>
+    <net code="22" name="/UART0_RX">
+      <node ref="J4" pin="2"/>
+    </net>
+    <net code="23" name="/A0">
+      <node ref="TP7" pin="1"/>
+      <node ref="R4" pin="1"/>
+      <node ref="R3" pin="2"/>
+      <node ref="U2" pin="2"/>
+      <node ref="J7" pin="2"/>
+    </net>
+  </nets>
+</export>

@@ -269,7 +269,7 @@ void loop() {
     sendSMS(email, location, vbat, "Outage");
     bool powerOut = true;
     while(powerOut) {
-      delay(outageDelay); //Every 5 minutes
+      delay(500); //Every 5 minutes
       powerOut = digitalRead(SENSORPIN) ? false : true;
     }
     //If we get here, power has been restored
