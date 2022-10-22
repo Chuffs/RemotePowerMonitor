@@ -3,3 +3,6 @@ Gerber
 \v0.2a\v0.2a\Gerber*
 *.net
 *.lib
+*.zip
+*.kicad_prl
+
